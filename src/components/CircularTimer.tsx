@@ -13,24 +13,50 @@ const CircularTimer: React.FC<CircularTimerProps> = ({
   const [remainingTime, setRemainingTime] = useState(timeLimit);
   const radius = 90;
   const circumference = 2 * Math.PI * radius;
-  const intervalRef = useRef<number | null>(null);
+
+  const startTimeRef = useRef<number | null>(null); // 타이머 시작 시간
+  const intervalRef = useRef<number | null>(null); // Interval 참조
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setRemainingTime((prev) => {
-        if (prev <= 1) {
+    const startTimer = () => {
+      startTimeRef.current = Date.now(); // 타이머 시작 시간 기록
+      intervalRef.current = setInterval(() => {
+        updateRemainingTime();
+      }, 1000);
+    };
+
+    const updateRemainingTime = () => {
+      if (startTimeRef.current !== null) {
+        const elapsedTime = Math.floor(
+          (Date.now() - startTimeRef.current) / 1000
+        ); // 경과 시간 계산
+        const newRemainingTime = Math.max(timeLimit - elapsedTime, 0);
+
+        setRemainingTime(newRemainingTime);
+
+        if (newRemainingTime <= 0) {
           clearInterval(intervalRef.current!);
-          onComplete(); // 타이머 종료 시 부모로 알림
-          return 0;
+          onComplete(); // 타이머 종료 시 부모 컴포넌트에 알림
         }
-        return prev - 1;
-      });
-    }, 1000);
+      }
+    };
+
+    startTimer();
+
+    // 페이지 포커스 상태 변경 감지
+    const handleVisibilityChange = () => {
+      if (!document.hidden && startTimeRef.current !== null) {
+        updateRemainingTime(); // 포커스 복구 시 즉시 업데이트
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
+      clearInterval(intervalRef.current!);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [onComplete]);
+  }, [timeLimit, onComplete]);
 
   // 진행률 계산
   const progress = (timeLimit - remainingTime) / timeLimit;
