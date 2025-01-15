@@ -5,7 +5,7 @@
 ---
 <div align="center">
   <img src="https://github.com/user-attachments/assets/47389966-457b-4643-9baa-b0efba0dcf80" alt="Image 1" width="300" />
-  <img src="https://github.com/user-attachments/assets/51264444-f3f5-409b-a15e-5d6c8456f61c" alt="Image 2" width="300" />
+  <img src="https://github.com/user-attachments/assets/c086dc75-a64c-4308-ab00-21633654051b" alt="Image 2" width="300" />
 </div>
 
 ### **기술 스택**
