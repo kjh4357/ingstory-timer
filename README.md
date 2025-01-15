@@ -3,9 +3,10 @@
 서버에서 불러온 시간을 기준으로 동작하는 간단한 타이머 앱입니다.
 
 ---
-![image](https://github.com/user-attachments/assets/47389966-457b-4643-9baa-b0efba0dcf80)
-![image](https://github.com/user-attachments/assets/51264444-f3f5-409b-a15e-5d6c8456f61c)
-
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/47389966-457b-4643-9baa-b0efba0dcf80" alt="Image 1" width="300" />
+  <img src="https://github.com/user-attachments/assets/51264444-f3f5-409b-a15e-5d6c8456f61c" alt="Image 2" width="300" />
+</div>
 
 ### **기술 스택**
 - **Frontend**: React, Vite, typescript
