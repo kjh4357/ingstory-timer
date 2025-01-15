@@ -18,8 +18,8 @@
 
 1. **GitHub 저장소 복제**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/kjh4357/ingstory-timer.git
+   cd timer-app
    ```
 
 2. **의존성 설치 (PNPM 사용)**
