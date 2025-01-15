@@ -65,7 +65,7 @@
 `.env` 파일에 필요한 환경 변수를 추가하세요. 
 
 ```
-VITE_API_URL=https://api.example.com](https://23qle2bzdnqgtwdegesxodas6e0qzlzr.lambda-url.ap-northeast-2.on.aws/)
+VITE_API_URL=https://23qle2bzdnqgtwdegesxodas6e0qzlzr.lambda-url.ap-northeast-2.on.aws/
 VITE_APP_KEY=nospoonhere
 ```
 
