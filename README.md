@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# **ingstory-timer**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+서버에서 불러온 시간을 기준으로 동작하는 간단한 타이머 앱입니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### **기술 스택**
+- **Frontend**: React, Vite, typescript
+- **Package Manager**: PNPM
+- **CSS Framework (Optional)**: Tailwind CSS
+- **Linting/Formatting**: ESLint
+- **API (Optional)**: Axios
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+### **설치 방법**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. **GitHub 저장소 복제**
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. **의존성 설치 (PNPM 사용)**
+   ```bash
+   pnpm install
+   ```
+
+3. **개발 서버 실행**
+   ```bash
+   pnpm dev
+   ```
+
+4. **프로덕션 빌드**
+   ```bash
+   pnpm build
+   ```
+
+5. **빌드된 결과물 로컬 테스트**
+   ```bash
+   pnpm preview
+   ```
+
+---
+
+### **스크립트 명령어**
+
+| 명령어          | 설명                                  |
+|------------------|---------------------------------------|
+| `pnpm dev`       | 개발 서버 실행 (http://localhost:5173) |
+| `pnpm build`     | 프로덕션 빌드 생성                   |
+| `pnpm preview`   | 빌드된 결과물을 로컬에서 미리 보기    |
+| `pnpm lint`      | ESLint로 코드 정적 분석              |
+
+---
+
+
+---
+
+
+
+### **환경 변수 설정**
+
+`.env` 파일에 필요한 환경 변수를 추가하세요. 
+
+```
+VITE_API_URL=https://api.example.com](https://23qle2bzdnqgtwdegesxodas6e0qzlzr.lambda-url.ap-northeast-2.on.aws/)
+VITE_APP_KEY=nospoonhere
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### **라이센스**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+이 프로젝트는 [MIT 라이센스](LICENSE)를 따릅니다. 자세한 내용은 LICENSE 파일을 참조하세요.
+
+---
+
+### **데모 링크**
+- http://ingstory-timer.s3-website.ap-northeast-2.amazonaws.com/
+
