@@ -3,6 +3,8 @@
 서버에서 불러온 시간을 기준으로 동작하는 간단한 타이머 앱입니다.
 
 ---
+![image](https://github.com/user-attachments/assets/47389966-457b-4643-9baa-b0efba0dcf80)
+![image](https://github.com/user-attachments/assets/51264444-f3f5-409b-a15e-5d6c8456f61c)
 
 
 ### **기술 스택**
