@@ -69,13 +69,6 @@ VITE_API_URL=https://api.example.com](https://23qle2bzdnqgtwdegesxodas6e0qzlzr.l
 VITE_APP_KEY=nospoonhere
 ```
 
----
-
-### **라이센스**
-
-이 프로젝트는 [MIT 라이센스](LICENSE)를 따릅니다. 자세한 내용은 LICENSE 파일을 참조하세요.
-
----
 
 ### **데모 링크**
 - http://ingstory-timer.s3-website.ap-northeast-2.amazonaws.com/
